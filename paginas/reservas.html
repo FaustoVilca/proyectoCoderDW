@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="../estilos/estilos.css">
+</head>
+
+<body>
+    <header class="reservas__header">
+        <nav>
+            <h1 class="reservas__nombre">Fausto Cafe</h1>
+            <img src="https://images.vexels.com/media/users/3/172806/raw/36f105c7bc57e2a043fca8731e265c38-diseno-de-logotipo-de-cafeteria.jpg"
+                width="250" height="150">
+            <hr>
+            <h2 class="reservas__titulo">Reservas</h2>
+            <ul class="reservas__menu"> <!--Inicio Menu navegacion-->
+                <hr class="division">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="carta.html">Carta</a></li>
+                <li><a href="galeria.html">Galeria</a>
+                    <ul class="reservas__submenu"> <!--Submenu galeria-->
+                        <li><a href="ambientes.html">Ambientes</a></li>
+                        <li><a href="acompanamientos.html">Platos</a></li>
+                        <li><a href="cafeteria.html">Cafeteria</a></li>
+                    </ul>
+                </li>
+                <li><a href="reservas.html">Reservas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main__reservas">
+        <form class="form__reservas"> <!--Inicio formulario de reservas-->
+            <label for="nombre"> Nombre: </label>
+            <input type="text" placeholder="Ingrese su nombre" name="nombre">
+            <label for="contraseña"> Contraseña: </label>
+            <input type="passwword" placeholder="Ingrese su contraseña" name="contraseña">
+            <label for="email"> E-mail: </label>
+            <input type="email" name="id" placeholder="Ingrese su e-mail" name="email">
+            <label for="cantidad"> Comensales: </label>
+            <input type="number" placeholder="Cantidad de comensales" name="cantidad"->
+            <label for="ninos">¿Asisten niños? </label>
+            <input type="radio" value="Si" name="ninos"> Si
+            <input type="radio" value="No" name="ninos"> No
+            <label for="horario"> Horario: </label>
+            <select name="horario"> <!--caja desplegable-->
+                <option value="1"> Desayuno </option>
+                <option value="2"> Almuerzo </option>
+                <option value="3"> Merienda </option>
+                <option value="3"> Cena </option>
+            </select>
+            <label for="mensaje"> Comentarios extras: </label>
+            <textarea name="" id="" cols="30" rows="10" name="mensaje"></textarea> <!--Comentarios extras-->
+            <input type="checkbox" name="" id=""> Deseo recibir promociones por e-mail
+            <input type="checkbox" name="" id=""> Acepto recibir llamada en caso de ser necesario
+            <input type="submit" value="Solicitar reserva">
+            <input type="reset" value="Borrar datos">
+        </form>
+    </main>
+    <footer class="footer__reservas">Córdoba, Argentina</footer>
+</body>
+
+</html>
