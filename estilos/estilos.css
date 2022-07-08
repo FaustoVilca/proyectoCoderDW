@@ -185,8 +185,8 @@
 .headerNosotros {
     grid-area: menuNosotros;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-end;
     align-content: center;
     background-image: linear-gradient(#A27B5C, #3F4E4F, #2C3639);
 }
