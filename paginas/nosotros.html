@@ -6,30 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../estilos/estilos.css">
 </head>
 
-<body class="contenedorNosotros">
-    <div class="logoNosotros">
-        <img class="imglogoNosotros"
+<body class="contenedorNosotros container-fluid">
+    <div class="logoNosotros class=" row">
+        <img class="imglogoNosotros col-sm-12"
             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAhFBMVEX///8jHyAAAADW1dURCgySkZEHAAAfGxyioaENAwbDwsLd3d0XEROIh4d0cnPy8vIZFBX4+PixsbG7urqAfn56eXlGRETW1tYzMDGXlpZoZmfMy8thX2A9Ozvr6+uamZmmpaUuKitYVVZOTExZV1hFQkMwLS44NTW0s7RlY2MoJCW+vr5LthItAAAHtUlEQVR4nO2b7XqiOhSFISIBoQpoq5YWbdXq2Pu/v5NkJxBQkdNhWmae9fbHGPK5gGTv7DCOAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB8mWh0QaGzlktzZWZXkFeXkUmmVMIqMJtsN+v1OphHdq3LbhrV0jxT1U7LngWyK6Qqa11d8KoKub6U6/SCkmOTP98x5oee54WMfWzStm4Egak22ZtqPkum9r35XXLmXsDoIe6S6krV5YQqsIlOT2OZ9B4oVTyxqpbL/VgXG13pRhBudLWdXc2N2aI/hde61gr96oqfdVNYxEm9Kc7mbQo9Ulh4jWquv/sGhZGVEz92U3jQI+VxKZUau/aqCMK1qra6rOb39hSNwti3Zp2aPZn1DPlrJ4Un3Zi/mi5+JTE1/CxzCtO0W+/uJDO3ptpRVOO6COtrLmqFYeakJZTzGNuP1SwZrQrf6Qn46t1LXxK7KjW9pNpe4FhdrTgV3FKDJNHM7L4UWhPN8Kr6PZ6pd7N0tilMaWxcz6EZa1R1ylc/DKxrBV1Lpjrt8sZr84cUpiojHh95fUgtCvVQPWM56B7Vmr6mMG8M4Vk/+z+tkPr1J9Rf8txBYXP4By8RMFvNNYWmxblOL+LvURiEqptio1497nZQqJ9hbF63YPcu2N17S39KIT27sOzfuHJt81DdFCExbTZWMiSFZ06LRtFQ1LaWai8oHDcbK/lBhafGdRImB87ry0ebwkwbNvZ5q7tvVljkeb4NtYDcYHcreyWzluw7KHQ+uJbYvGE/pPBVOBV66rhe6dHQ/R+rBUY6FvTLTbooLH1AdsNef7dCfcdr6I7IPUmsAUQdFJYOmOu/Fhf9DUuh6iWR3klRn6ntCp3ASEy0E/ajCldxkhiRPNHQFIpYNW7youJFJ4XOnJkm2X7mNPlmhcH+5eWdxsOfXgzq7TqpjQWppReWH7opdKKVmdtxMnIa/IC1WF63FtQLzT291Og9wl2FMrChHyNnTTM7HIt/4FUnn3oEo64KnTwxO6/mZByMQtpYJO+1UW1r42lTKPaGpdnIaxmDUThi9rDpLdUOdSeFMlCnX9S6kzoYheTpmD73tNR81MZzR2HpwYW1nMEonFoLTbXUFPZ47il0NsZJtS8ORiH5l8ZRm9ui2nZPW0lgTMSBX87EoSikCEvpbJvoxOaOwhMLBeysc8immhVqOAqj8XhNffD39ViyHtPDSF7uKKRnzVeNG2PvFoegcMo8T1sz7mko6cZXFSalDK3wo6Fw002hbxQ+/mGFtTBpHbXyLJvhpioWp4NmobYPzRjaLYX6mrfW6R1FE12nH/6XQnmXyRlw+VvdiZPLyaz+WuqYBrNPy64p1Ack3J3ZLVbRvb4VTlmozw6SsERHMpRJIOvoJm9ZFI3GxuqpujrmzX59LkfZa+xePourCqe65HlrtVhOy94VFptgquMWwUYTaOuhgtnmkIX71TkEo7lmshKR45uAxvauQnMGxMOqxXK96l+hYyy8fenZPoJYGJ+zJH7S5S6zwr1jc1VhFRko4b0dzFxVSFPdnj8UHjbbiymrBwfYofQ9H+tZnNUF3lDoBKx+gOj5FzvLL5OzWGJv5FJ9Kb0staXk/IN5ZgsYs5o5mByZOe7kHjtf7g+poYZCZ7kX05+bFtniMjrwZdLFo2Rqx43UpWltcA9UqnTA8ocDnQB+PM4bEe7ReB+ro8Ldw8S54Ep3RBQ8n2WT/nGa9ajvt5gVxc2hzGa3I/stpF+rBgAAYBik0bKoFvIiikqDls4MF4na5yvNj1mGRfQibXH4TLLWZ2nQV1vK85ivYDJQ9aYTvnArZ8xsoJWzx0OTunl8+nPkwmuMfc+NlTt8YJyL/RRnv1Sm8LUoFiAVym9/KBGp3aLOyWvlbp2e/iBH7oaPp4dQBcHFPoA/ZVtxjQIZQtObCuc8pEphmZj5Ln99kCwKKvdBqT4/reyHgrmJfF4Pseun8tCbzdQmgc7buP310orzo/ktFNr7dFHuyRkoQowKTGxDGRR+EkN1VMSCxt9UWO5c/zKFMn4RMKYVpi0KB/UMo+VoWX1ybf0cLfWf2ocahekyElOorjBNlUKyAWkqFWqDkBahfLm1fVDlnpzKWtS6avZc/5L8N7jx7bXNxFJI1BQuGVM7ecFOfsvNdeJV5DMdsBHIrkw5puKgkw5996GwGR254J7CXH2twqUBPIhyKiwoEyuxPJkcXyn0TcpXsYNJh777UOjd457C2TaTYbEsy7YTJ91mb8J0UMLJgtjlu0wiDGCWiWpHlVKxg0mHvntQSMcSrRTtCp2vrjTF/a7XzrdhFEbq/t9T+HdbC7+DtfibFZLFP/ybFl85aIEn/bUdV6dswpWL/xmFwqrwc+QUr5yfHWfhqVPdsef6KqzbqnAfSZamHKUGuEEcM2WsuTplKcS/oTxASUIVLW1TaCx+rsoZi9/XoVKfLJjvhZ5P/0Et53Rc/0ZulRjyW1lQaCgP0wqzG/aVQlZujge4PxSjzdbrdVZ+zB6s14EJ8H+eTlXwfmInshL5sOdl6uqHpwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAX/wHa0uHEUfpkq8AAAAASUVORK5CYII=">
     </div>
     <header class="headerNosotros">
-        <ul class="menuNosotros">
-            <!--Inicio Menu navegacion-->
-            <li><a href="../index.html">INICIO</a></li>
-            <li><a href="nosotros.html">NOSOTROS</a></li>
-            <li><a href="carta.html">CARTA</a></li>
-            <li><a href="galeria.html">GALERIA</a>
-                <ul class="nosotros__submenu">
-                    <!--Sub menu galeria-->
-                    <li><a href="ambientes.html">Ambientes</a></li>
-                    <li><a href="acompanamientos.html">Platos</a></li>
-                    <li><a href="cafeteria.html">Cafeteria</a></li>
+        <nav class="navbar navbar-expand-lg navbar-dark p-3 bg-danger" id="headerNav">
+            <div class="container-fluid">
+                <ul class="menuNosotros">
+                    <!--Inicio Menu navegacion-->
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="carta.html">CARTA</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link mx-2 dropdown-toggle" href="#"
+                            id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            href="galeria.html">GALERIA</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="acompanamientos.html">Acompañamientos</a></li>
+                            <li><a class="dropdown-item" href="cafeteria.html">Cafetería</a></li>
+                            <li><a class="dropdown-item" href="ambientes.html">Ambientes</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="reservas.html">RESERVAS</a>
+                    </li>
                 </ul>
-            </li>
-            <li><a href="reservas.html">RESERVAS</a></li>
-        </ul>
+            </div>
+        </nav>
     </header>
     <main class="mainNosotros">
         <!--Articulo/texto principal-->
@@ -55,8 +63,15 @@
         </div>
     </main>
     <footer class="footerNosotros">
-        <p>Cordoba, Argentina</p>
+        <div>
+            <p>
+                Cordoba, Argentina
+            </p>
+        </div>
     </footer>
+
+    <script src="../js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
