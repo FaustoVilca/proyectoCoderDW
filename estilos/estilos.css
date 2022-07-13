@@ -10,7 +10,7 @@
     height: max-content;
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr;
-    grid-template-rows: 1fr 1.5fr 0.5fr;
+    grid-template-rows: 1fr 1.5fr 1fr;
     grid-template-areas:
         "logoIndex menuIndex menuIndex"
         "tituloIndex tituloIndex tituloIndex"
@@ -134,14 +134,22 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 180px;
+    margin-top: 230px;
     align-items: center;
     font-family: 'Amatic SC', cursive;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.24);
 }
 
-.fondoInstagram{
-    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+.fondoTwitter {
+    background-color: #55acee;
+}
+
+.fondoFacebook {
+    background-color: #4267B2;
+}
+
+.fondoInstagram {
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
 /* estilo submenu index */
@@ -157,6 +165,7 @@
     position: absolute;
     display: none;
     background-color: transparent;
+    margin-left: -35px;
 }
 
 .indexHeader__submenu li {
@@ -167,7 +176,9 @@
     display: block;
 }
 
-
+.indexHeader__submenu a {
+    font-size: 25px;
+}
 
 /* ------------Estilo nosotros----------- */
 .contenedorNosotros {
@@ -179,15 +190,19 @@
         "logoIndex menuNosotros menuNosotros"
         "textoNosotros textoNosotros textoNosotros"
         "footerNosotros footerNosotros footerNosotros";
+
+    background-image: url(https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2084&q=80);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .headerNosotros {
     grid-area: menuNosotros;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
     align-content: center;
-    background-image: linear-gradient(#A27B5C, #3F4E4F, #2C3639);
 }
 
 .menuNosotros {
@@ -197,20 +212,31 @@
     flex-direction: row;
     justify-content: flex-end;
     align-content: flex-end;
-    margin-top: 20px;
+    font-size: 30px;
+    margin-left: 300px;
+    margin-top: -5px;
+}
+
+.menuNosotros li:hover {
+    font-size: 40px;
+    transition: font-size 0.7s;
+}
+
+.dropdown-menu li:hover {
+    font-size: 30px;
+    transition: font-size 0.7s;
 }
 
 .menuNosotros li a {
     text-decoration: none;
     color: darksalmon;
-    padding-right: 40px;
+    padding-right: 55px;
     font-family: 'Amatic SC', cursive;
     /*google font importada en el html*/
 }
 
 .logoNosotros {
     grid-area: logoIndex;
-    background-image: linear-gradient(#A27B5C, #3F4E4F, #2C3639);
 }
 
 .imglogoNosotros {
@@ -241,7 +267,6 @@
 }
 
 .backgroundTextoNosotros {
-    background-image: url(https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/05/15174720/Caf%C3%A9-de-especialidad-7.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -254,20 +279,27 @@
 }
 
 .h1Nosotros {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
     font-size: 35px;
     grid-area: h1;
+    font-family: 'Amatic SC', cursive;
 }
 
 .textoNosotros {
-    font-size: 20px;
+    font-size: 18x;
     flex-direction: column;
     justify-content: flex-start;
     align-content: flex-start;
+    font-family: 'Edu SA Beginner', cursive;
+
 }
 
 .footerNosotros {
     grid-area: footerNosotros;
-    background-image: linear-gradient(#A27B5C, #3F4E4F, #2C3639);
+    background-color: transparent;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -289,9 +321,14 @@
     display: block;
 }
 
+.dropdown-menu {
+    background-color: transparent;
+    font-size: 20px;
+}
+
 /* --------------------------------------------- */
 
-.carta__header {
+.carta__header a {
     position: sticky;
     top: 10px;
     bottom: 100px;
@@ -551,6 +588,50 @@
     }
 
 }
+
+@media screen and (max-width: 768px) {
+    .contenedorNosotros {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "logoIndex menuNosotros"
+            "textoNosotros textoNosotros"
+            "footerNosotros footerNosotros";
+    }
+
+    .logoIndex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .imglogoIndex {
+        margin-left: 0px;
+    }
+
+    .menuNosotros{
+        margin-left: 200px;
+        list-style-type: none;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+        background: rgba(57, 25, 15, 0.5);
+    }
+
+    .textoNosotros{
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        margin-top: 0px;
+    }
+}
+
 
 /*------QUERY MOBILE VIEW-------*/
 
