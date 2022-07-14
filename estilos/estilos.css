@@ -299,12 +299,11 @@
 
 .footerNosotros {
     grid-area: footerNosotros;
-    background-color: transparent;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: antiquewhite;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color:antiquewhite;
 }
 
 .nosotros__submenu {
@@ -540,7 +539,7 @@
     padding: 45px;
 }
 
-/*------QUERY TABLET VIEW-------*/
+/*------Index QUERY TABLET VIEW-------*/
 
 @media screen and (max-width: 768px) {
     .contenedorIndex {
@@ -589,51 +588,7 @@
 
 }
 
-@media screen and (max-width: 768px) {
-    .contenedorNosotros {
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas:
-            "logoIndex menuNosotros"
-            "textoNosotros textoNosotros"
-            "footerNosotros footerNosotros";
-    }
-
-    .logoIndex {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .imglogoIndex {
-        margin-left: 0px;
-    }
-
-    .menuNosotros{
-        margin-left: 200px;
-        list-style-type: none;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0px;
-        background: rgba(57, 25, 15, 0.5);
-    }
-
-    .textoNosotros{
-        list-style-type: none;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        align-content: center;
-        margin-top: 0px;
-    }
-}
-
-
-/*------QUERY MOBILE VIEW-------*/
+/*------Index QUERY MOBILE VIEW-------*/
 
 @media screen and (max-width: 425px) {
     .contenedorIndex {
@@ -690,5 +645,102 @@
 
     .footerIndex {
         align-items: center;
+    }
+}
+
+/*Nosotros query tablet view*/
+
+@media screen and (max-width: 768px) {
+    .contenedorNosotros {
+        grid-template-columns: 1fr 3.5fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+            "logoIndex menuNosotros"
+            "textoNosotros textoNosotros"
+            "footerNosotros footerNosotros";
+    }
+
+    .logoIndex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .menuNosotros {
+        list-style-type: none;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 40px;
+    }
+
+    .menuNosotros li a {
+        padding-right: 18px;
+        font-size: 25px;
+    }
+
+    .textoNosotros {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        margin-top: 0px;
+    }
+
+    .footerNosotros {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Nosotros Query Mobile view */
+
+@media screen and (max-width: 425px) {
+    .contenedorNosotros {
+        grid-template-columns: 100%;
+        grid-template-rows: 0.5fr 0.2fr 0.1fr 1px;
+        grid-template-areas:
+            "logoIndex"
+            "menuNosotros"
+            "textoNosotros"
+            "footerNosotros";
+    }
+
+    .menuNosotros {
+        margin-left: 30px;
+    }
+
+    .menuNosotros li a {
+        padding-right: 10px;
+        font-size: 20px;
+    }
+
+    .imglogoNosotros {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        display: flex;
+        margin-left: 140px;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .logoNosotros img {
+        margin-bottom: 0px;
+    }
+
+    .textoNosotros {
+        background: rgba(0, 0, 0, 0.24);
+    }
+
+    .footerNosotros{
+        align-items: center;
+        justify-items: center;
     }
 }
