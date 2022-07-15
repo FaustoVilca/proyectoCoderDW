@@ -74,6 +74,10 @@
     /*google font importada en el html*/
 }
 
+.menuIndex a:hover {
+    text-decoration: underline;
+}
+
 /* estilo titulo central index */
 
 .tituloIndex {
@@ -235,6 +239,10 @@
     /*google font importada en el html*/
 }
 
+.menuNosotros a:hover {
+    text-decoration: underline;
+}
+
 .logoNosotros {
     grid-area: logoIndex;
 }
@@ -303,7 +311,7 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: flex-end;
-    color:antiquewhite;
+    color: antiquewhite;
 }
 
 .nosotros__submenu {
@@ -739,7 +747,7 @@
         background: rgba(0, 0, 0, 0.24);
     }
 
-    .footerNosotros{
+    .footerNosotros {
         align-items: center;
         justify-items: center;
     }
