@@ -118,11 +118,11 @@
   font-family: 'Amatic SC', cursive;
   background: rgba(0, 0, 0, 0.24); }
 
-.fondoTwitter {
-  background-color: #55acee; }
-
-.fondoFacebook {
-  background-color: #4267B2; }
-
 .fondoInstagram {
   background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+
+.fondo-twitter {
+  background-color: #55acee; }
+
+.fondo-facebook {
+  background-color: #4267B2; }
