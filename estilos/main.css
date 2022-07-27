@@ -28,49 +28,39 @@
   flex-direction: column;
   justify-content: center;
   align-content: center; }
-
-.indexHeaderMenu {
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-content: flex-end;
-  margin-top: 30px; }
-  .indexHeaderMenu li {
-    display: inline-block;
+  .headerIndex .menuIndex {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
     font-size: 30px;
-    position: relative;
-    padding: 20px; }
-    .indexHeaderMenu li:hover {
-      font-size: 40px;
-      transition: font-size 0.7s; }
-
-.indexHeader__submenu {
-  position: absolute;
-  display: none;
-  background-color: transparent;
-  margin-left: -35px; }
-  .indexHeader__submenu li {
-    display: block; }
-    .indexHeader__submenu li:hover.indexHeader__submenu {
-      display: block; }
-  .indexHeader__submenu a {
-    font-size: 25px; }
-
-.menuIndex li {
-  text-decoration: none;
-  color: darksalmon;
-  padding-right: 40px;
-  font-family: 'Amatic SC', cursive; }
-
-.menuIndex a {
-  text-decoration: none;
-  color: darksalmon;
-  padding-right: 40px;
-  font-family: 'Amatic SC', cursive; }
-  .menuIndex a:hover {
-    text-decoration: underline; }
+    margin-left: 50px;
+    margin-top: -5px; }
+    .headerIndex .menuIndex li {
+      text-decoration: none;
+      color: darksalmon;
+      padding-right: 55px;
+      font-family: 'Amatic SC', cursive;
+      /*google font importada en el html*/ }
+      .headerIndex .menuIndex li:hover {
+        font-size: 40px;
+        transition: font-size 0.7s; }
+    .headerIndex .menuIndex a {
+      text-decoration: none;
+      color: darksalmon;
+      padding-right: 55px;
+      font-family: 'Amatic SC', cursive;
+      /*google font importada en el html*/ }
+      .headerIndex .menuIndex a:hover {
+        text-decoration: underline; }
+    .headerIndex .menuIndex .dropdown-menu {
+      background-color: transparent;
+      font-size: 20px; }
+      .headerIndex .menuIndex .dropdown-menu li:hover {
+        font-size: 30px;
+        transition: font-size 0.7s; }
 
 .tituloIndex {
   grid-area: tituloIndex;
@@ -126,3 +116,229 @@
 
 .fondo-facebook {
   background-color: #4267B2; }
+
+@media screen and (max-width: 768px) {
+  .contenedorIndex {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "logoIndex tituloIndex" "menuIndex menuIndex" "footerIndex footerIndex"; }
+  .logoIndex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center; }
+    .logoIndex img {
+      margin-left: 0px; }
+  .tituloIndex {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    margin-left: 0px; }
+  .headerIndex {
+    align-content: center;
+    justify-content: center;
+    margin-right: 20px; }
+    .headerIndex .menuIndex {
+      background: rgba(57, 25, 15, 0.5); }
+      .headerIndex .menuIndex li {
+        padding-right: 30px;
+        color: antiquewhite; }
+      .headerIndex .menuIndex a {
+        padding-right: 30px;
+        color: antiquewhite; } }
+
+@media screen and (max-width: 425px) {
+  .contenedorIndex {
+    grid-template-columns: 100%;
+    grid-template-rows: 0.5fr 0.5fr 0.1fr 0.1fr;
+    grid-template-areas: "logoIndex" "tituloIndex" "menuIndex" "footerIndex"; }
+  .logoIndex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center; }
+    .logoIndex img {
+      margin-left: 0px; }
+  .headerIndex {
+    margin-left: -50px;
+    padding: 5px; }
+    .headerIndex .menuIndex {
+      list-style-type: none;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      margin-top: 0px;
+      background-color: transparent;
+      padding-top: 75px; }
+      .headerIndex .menuIndex li {
+        text-decoration: none;
+        color: bisque;
+        padding-right: 0px; }
+      .headerIndex .menuIndex a {
+        text-decoration: none;
+        color: bisque;
+        background-color: #592212;
+        padding-right: 0px; }
+  .tituloIndex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    margin-left: 0px; }
+  .footerIndex {
+    align-items: center; } }
+
+.contenedorNosotros {
+  height: max-content;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 0.5fr;
+  grid-template-areas: "logoIndex menuNosotros menuNosotros" "textoNosotros textoNosotros textoNosotros" "footerNosotros footerNosotros footerNosotros";
+  background-image: url(https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2084&q=80);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.headerNosotros {
+  grid-area: menuNosotros;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center; }
+  .headerNosotros .menuNosotros {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    font-size: 30px;
+    margin-left: 300px;
+    margin-top: -5px; }
+    .headerNosotros .menuNosotros li {
+      text-decoration: none;
+      color: darksalmon;
+      padding-right: 55px;
+      font-family: 'Amatic SC', cursive;
+      /*google font importada en el html*/ }
+      .headerNosotros .menuNosotros li:hover {
+        font-size: 40px;
+        transition: font-size 0.7s; }
+    .headerNosotros .menuNosotros a {
+      text-decoration: none;
+      color: darksalmon;
+      padding-right: 55px;
+      font-family: 'Amatic SC', cursive;
+      /*google font importada en el html*/ }
+      .headerNosotros .menuNosotros a:hover {
+        text-decoration: underline; }
+    .headerNosotros .menuNosotros .dropdown-menu {
+      background-color: transparent;
+      font-size: 20px; }
+      .headerNosotros .menuNosotros .dropdown-menu li:hover {
+        font-size: 30px;
+        transition: font-size 0.7s; }
+
+.logoNosotros {
+  grid-area: logoIndex; }
+  .logoNosotros img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    margin-left: 70px;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 10px; }
+
+.mainNosotros {
+  grid-area: textoNosotros;
+  color: antiquewhite;
+  font-style: oblique;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 550px; }
+  .mainNosotros .divNosotros {
+    display: flex;
+    flex-direction: column; }
+    .mainNosotros .divNosotros .backgroundTextoNosotros {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 550px; }
+      .mainNosotros .divNosotros .backgroundTextoNosotros .h1Nosotros {
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        font-size: 35px;
+        grid-area: h1;
+        font-family: 'Amatic SC', cursive; }
+      .mainNosotros .divNosotros .backgroundTextoNosotros .textoNosotros {
+        font-size: 18x;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: flex-start;
+        font-family: 'Edu SA Beginner', cursive; }
+  .mainNosotros .footerNosotros {
+    grid-area: footerNosotros;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: antiquewhite; }
+
+@media screen and (max-width: 425px) {
+  .contenedorNosotros {
+    grid-template-columns: 100%;
+    grid-template-rows: 0.5fr 0.2fr 0.1fr 1px;
+    grid-template-areas: "logoIndex" "menuNosotros" "textoNosotros" "footerNosotros"; }
+  .headerNosotros .menuNosotros {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 5px; }
+    .headerNosotros .menuNosotros li {
+      padding-right: 10px;
+      font-size: 20px; }
+    .headerNosotros .menuNosotros a {
+      padding-right: 10px;
+      font-size: 20px; }
+  .logoNosotros img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    margin-left: 90px;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 0px; }
+  .textoNosotros {
+    background: rgba(0, 0, 0, 0.24); }
+  .footerNosotros {
+    align-items: center;
+    justify-items: center;
+    color: antiquewhite; } }
+
+.contenedorCarta {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 1fr;
+  grid-template-areas: "logoCarta logoCarta logoCarta" "menuCarta menuCarta menuCarta" "h1Carta h1Carta h1Carta" "preciosCarta preciosCarta preciosCarta";
+  background-image: url(https://images.template.net/wp-content/uploads/2015/04/21043832/Featured-Image-Coffee-Menu-Template1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.logoCarta {
+  grid-area: logoCarta; }
+
+.headerCarta {
+  grid-area: menuCarta; }

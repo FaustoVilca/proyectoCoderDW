@@ -1,0 +1,23 @@
+.contenedorCarta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr;
+    grid-template-areas:
+        "logoCarta logoCarta logoCarta"
+        "menuCarta menuCarta menuCarta"
+        "h1Carta h1Carta h1Carta"
+        "preciosCarta preciosCarta preciosCarta";
+
+    background-image: url(https://images.template.net/wp-content/uploads/2015/04/21043832/Featured-Image-Coffee-Menu-Template1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.logoCarta {
+    grid-area: logoCarta;
+}
+
+.headerCarta {
+    grid-area: menuCarta;
+}

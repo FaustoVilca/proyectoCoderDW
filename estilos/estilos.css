@@ -1,4 +1,4 @@
-* {
+b* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,7 +16,7 @@
         "tituloIndex tituloIndex tituloIndex"
         "footerIndex footerIndex footerIndex";
 
-    background-image: url(https://image.architonic.com/pro2-3/20229014/cw-coffee-bar-counter-03-main-211116-pro-b-arcit18.jpg);
+    background-image: url(https://img.pikbest.com/backgrounds/20190423/korean-style-cute-coffee-shop-menu-detail-page-vector-background-image_1810141.jpg!bw700);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -312,20 +312,6 @@
     align-items: flex-end;
     justify-content: flex-end;
     color: antiquewhite;
-}
-
-.nosotros__submenu {
-    position: absolute;
-    display: none;
-    background-color: transparent;
-}
-
-.nosotros__submenu li {
-    display: block;
-}
-
-.menuNosotros li:hover .nosotros__submenu {
-    display: block;
 }
 
 .dropdown-menu {

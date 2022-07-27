@@ -1,0 +1,201 @@
+.contenedorNosotros {
+    height: max-content;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 0.5fr;
+    grid-template-areas:
+        "logoIndex menuNosotros menuNosotros"
+        "textoNosotros textoNosotros textoNosotros"
+        "footerNosotros footerNosotros footerNosotros";
+
+    background-image: url(https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2084&q=80);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headerNosotros {
+    grid-area: menuNosotros;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    .menuNosotros {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: flex-end;
+        font-size: 30px;
+        margin-left: 300px;
+        margin-top: -5px;
+
+        li {
+            &:hover {
+                font-size: 40px;
+                transition: font-size 0.7s;
+            }
+
+            text-decoration: none;
+            color: darksalmon;
+            padding-right: 55px;
+            font-family: 'Amatic SC',
+            cursive;
+            /*google font importada en el html*/
+        }
+
+        a {
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            text-decoration: none;
+            color: darksalmon;
+            padding-right: 55px;
+            font-family: 'Amatic SC',
+            cursive;
+            /*google font importada en el html*/
+        }
+
+        .dropdown-menu {
+            li {
+                &:hover {
+                    font-size: 30px;
+                    transition: font-size 0.7s;
+                }
+            }
+
+            background-color: transparent;
+            font-size: 20px;
+        }
+    }
+}
+
+.logoNosotros {
+    grid-area: logoIndex;
+
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        display: flex;
+        margin-left: 70px;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+}
+
+.mainNosotros {
+    grid-area: textoNosotros;
+    color: antiquewhite;
+    font-style: oblique;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 550px;
+
+    .divNosotros {
+        display: flex;
+        flex-direction: column;
+
+        .backgroundTextoNosotros {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 550px;
+
+            .h1Nosotros {
+                display: flex;
+                flex-direction: row;
+                align-content: center;
+                justify-content: center;
+                font-size: 35px;
+                grid-area: h1;
+                font-family: 'Amatic SC', cursive;
+            }
+
+            .textoNosotros {
+                font-size: 18x;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-content: flex-start;
+                font-family: 'Edu SA Beginner', cursive;
+
+            }
+        }
+    }
+
+    .footerNosotros {
+        grid-area: footerNosotros;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-end;
+        color: antiquewhite;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .contenedorNosotros {
+        grid-template-columns: 100%;
+        grid-template-rows: 0.5fr 0.2fr 0.1fr 1px;
+        grid-template-areas:
+            "logoIndex"
+            "menuNosotros"
+            "textoNosotros"
+            "footerNosotros";
+    }
+
+    .headerNosotros {
+
+        .menuNosotros {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-left: 5px;
+
+            li {
+                padding-right: 10px;
+                font-size: 20px;
+            }
+
+            a {
+                padding-right: 10px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .logoNosotros {
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            margin-left: 90px;
+            flex-direction: row;
+            justify-items: center;
+            align-items: center;
+            margin-top: 15px;
+            margin-bottom: 0px;
+        }
+    }
+
+    .textoNosotros {
+        background: rgba(0, 0, 0, 0.24);
+    }
+
+    .footerNosotros {
+        align-items: center;
+        justify-items: center;
+        color: antiquewhite;
+    }
+}
