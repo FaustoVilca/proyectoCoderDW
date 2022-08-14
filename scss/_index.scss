@@ -2,7 +2,7 @@
     height: max-content;
     display: grid;
     grid-template-columns: 0.5fr 1fr 1fr;
-    grid-template-rows: 1fr 1.5fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
     grid-template-areas:
         "logoIndex menuIndex menuIndex"
         "tituloIndex tituloIndex tituloIndex"
@@ -11,95 +11,79 @@
     background-image: url(https://image.architonic.com/pro2-3/20229014/cw-coffee-bar-counter-03-main-211116-pro-b-arcit18.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-}
 
-@mixin sizes($width, $height) {
-    width: $width;
-    height: $height;
-}
+    @mixin sizes($width, $height) {
+        width: $width;
+        height: $height;
+    }
 
-.logoIndex {
-    grid-area: logoIndex;
-    margin-top: 10px;
+    .logoIndex {
+        grid-area: logoIndex;
+        margin-top: 20px;
 
-    img {
+        img {
 
-        @include sizes(150px, 150px);
-        border-radius: 50%;
-        display: flex;
-        margin-left: 70px;
-        flex-direction: row;
-        justify-items: center;
-        align-items: center;
-        margin-top: 10px;
+            @include sizes(150px, 150px);
+            border-radius: 50%;
+            display: flex;
+            margin-left: 70px;
+            flex-direction: row;
+            justify-items: center;
+            align-items: center;
+
+        }
 
     }
 
-}
-
-.headerIndex {
-    grid-area: menuIndex;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-
-    .menuIndex {
-        list-style-type: none;
+    .headerIndex {
+        grid-area: menuIndex;
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-content: flex-end;
-        font-size: 30px;
-        margin-left: 50px;
-        margin-top: -5px;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
 
-        li {
-            &:hover {
-                font-size: 40px;
-                transition: font-size 0.7s;
-            }
+        .menuIndex {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-content: flex-end;
+            font-size: 30px;
 
-            text-decoration: none;
-            color: darksalmon;
-            padding-right: 55px;
-            font-family: 'Amatic SC',
-            cursive;
-            /*google font importada en el html*/
-        }
-
-        a {
-
-            &:hover {
-                text-decoration: underline;
-            }
-
-            text-decoration: none;
-            color: darksalmon;
-            padding-right: 55px;
-            font-family: 'Amatic SC',
-            cursive;
-            /*google font importada en el html*/
-        }
-
-        .dropdown-menu {
             li {
                 &:hover {
-                    font-size: 30px;
+                    font-size: 40px;
                     transition: font-size 0.7s;
                 }
+
+                text-decoration: none;
+                color: darksalmon;
+                padding-right: 55px;
+                font-family: 'Amatic SC',
+                cursive;
+                /*google font importada en el html*/
             }
 
-            background-color: transparent;
-            font-size: 20px;
+            a {
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                text-decoration: none;
+                color: darksalmon;
+                padding-right: 55px;
+                font-family: 'Amatic SC',
+                cursive;
+                /*google font importada en el html*/
+            }
         }
     }
-}
 
-$colorFuente: (
-    color: antiquewhite
-);
+    $colorFuente: (
+        color: antiquewhite
+    );
 
 .tituloIndex {
     grid-area: tituloIndex;
@@ -292,4 +276,5 @@ $color in $redes {
     .footerIndex {
         align-items: center;
     }
+}
 }
