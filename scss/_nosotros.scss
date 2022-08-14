@@ -1,14 +1,15 @@
 .contenedorNosotros {
     height: max-content;
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr 0.5fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 3fr 0.5fr;
     grid-template-areas:
         "logoNosotros menuNosotros menuNosotros"
-        "textoNosotros textoNosotros textoNosotros"
+        "h1Nosotros h1Nosotros h1Nosotros"
+        "parrafoNosotros parrafoNosotros parrafoNosotros"
         "footerNosotros footerNosotros footerNosotros";
 
-    background-image: url(https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2084&q=80);
+    background-image: url(https://wallpapercrafter.com/sizes/1920x1080/273537-coffee-shop-coffe-cup-cup-and-saucer-and-table-hd.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,9 +47,10 @@
                     text-decoration: underline;
                 }
 
+                border-radius: 15%;
+                background-color:blanchedalmond;
                 text-decoration: none;
-                color: darksalmon;
-                padding-right: 55px;
+                color: #592212;
                 font-family: 'Amatic SC',
                 cursive;
                 /*google font importada en el html*/
@@ -76,112 +78,126 @@
         }
     }
 
-    .mainNosotros {
-        grid-area: textoNosotros;
-        color: antiquewhite;
-        font-style: oblique;
+    .h1Nosotros {
+        grid-area: h1Nosotros;
         display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 550px;
+        align-content: center;
+        justify-content: center;
+        font-size: 35px;
+        font-family: 'Amatic SC', cursive;
+        color: darksalmon;
+    }
 
-        .divNosotros {
-            display: flex;
-            flex-direction: column;
+    .divNosotros {
+        grid-area: parrafoNosotros;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding: 100px;
 
-            .backgroundTextoNosotros {
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                height: 550px;
-
-                .h1Nosotros {
-                    display: flex;
-                    flex-direction: row;
-                    align-content: center;
-                    justify-content: center;
-                    font-size: 35px;
-                    grid-area: h1;
-                    font-family: 'Amatic SC', cursive;
-                }
-
-                .textoNosotros {
-                    font-size: 18x;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-content: flex-start;
-                    font-family: 'Edu SA Beginner', cursive;
-
-                }
-            }
+        p {
+            grid-area: textoNosotros;
+            font-size: 18x;
+            font-family: 'Edu SA Beginner', cursive;
         }
 
-        .footerNosotros {
-            grid-area: footerNosotros;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-end;
-            justify-content: flex-end;
-            color: antiquewhite;
+        .p1{
+            position: relative;
+            background-color: #285AEB;
+        }
+
+        .p2{
+            background-color: #d6249f;
+        }
+
+        .p3{
+            background-color: #fdf497;
+        }
+    }
+}
+
+.footerNosotros {
+    grid-area: footerNosotros;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 230px;
+    align-items: center;
+    font-family: 'Amatic SC', cursive;
+    background: rgba(0, 0, 0, 0.24);
+}
+
+.fondoInstagram {
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+$redes: (
+    twitter:#55acee,
+    facebook: #4267B2,
+);
+
+@each $red,
+$color in $redes {
+    .fondo-#{$red} {
+        background-color: $color;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .contenedorNosotros {
+        grid-template-columns: 100%;
+        grid-template-rows: 0.5fr 0.2fr 0.1fr 1px;
+        grid-template-areas:
+            "logoIndex"
+            "menuNosotros"
+            "textoNosotros"
+            "footerNosotros";
+    }
+
+    .headerNosotros {
+
+        .menuNosotros {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-left: 5px;
+
+            li {
+                padding-right: 10px;
+                font-size: 20px;
+            }
+
+            a {
+                padding-right: 10px;
+                font-size: 20px;
+            }
         }
     }
 
-    @media screen and (max-width: 425px) {
-        .contenedorNosotros {
-            grid-template-columns: 100%;
-            grid-template-rows: 0.5fr 0.2fr 0.1fr 1px;
-            grid-template-areas:
-                "logoIndex"
-                "menuNosotros"
-                "textoNosotros"
-                "footerNosotros";
-        }
+    .logoNosotros {
 
-        .headerNosotros {
-
-            .menuNosotros {
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                margin-left: 5px;
-
-                li {
-                    padding-right: 10px;
-                    font-size: 20px;
-                }
-
-                a {
-                    padding-right: 10px;
-                    font-size: 20px;
-                }
-            }
-        }
-
-        .logoNosotros {
-
-            img {
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                display: flex;
-                margin-left: 90px;
-                flex-direction: row;
-                justify-items: center;
-                align-items: center;
-                margin-top: 15px;
-                margin-bottom: 0px;
-            }
-        }
-
-        .textoNosotros {
-            background: rgba(0, 0, 0, 0.24);
-        }
-
-        .footerNosotros {
-            align-items: center;
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            margin-left: 90px;
+            flex-direction: row;
             justify-items: center;
-            color: antiquewhite;
+            align-items: center;
+            margin-top: 15px;
+            margin-bottom: 0px;
         }
+    }
+
+    .textoNosotros {
+        background: rgba(0, 0, 0, 0.24);
+    }
+
+    .footerNosotros {
+        align-items: center;
+        justify-items: center;
+        color: antiquewhite;
     }
 }

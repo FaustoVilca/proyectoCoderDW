@@ -7,7 +7,7 @@
         "tituloCarta tituloCarta tituloCarta"
         "mainCarta mainCarta mainCarta";
 
-    background-image: url(https://images.unsplash.com/photo-1463797221720-6b07e6426c24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29mZmVlJTIwc2hvcCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80);
+    background-image: url(https://rare-gallery.com/uploads/posts/519094-basket-chalkboard.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -43,7 +43,7 @@
             list-style-type: none;
             display: flex;
             flex-wrap: wrap;
-            font-size: 30px;
+            font-size: 35px;
             margin-top: 80px;
             padding-right: 55px;
 
@@ -70,7 +70,7 @@
                 border-radius: 15%;
                 background-color:blanchedalmond;
                 text-decoration: none;
-                color: darksalmon;
+                color: #592212;
                 font-family: 'Amatic SC',
                 cursive;
                 /*google font importada en el html*/
@@ -128,6 +128,50 @@
 
     100% {
         background-color: #A27B5C;
+    }
+}
+
+.mainCarta {
+    grid-area: mainCarta;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    .menu-area {
+
+        .single-menu {
+            background-color: #fff;
+            border-radius: 25px;
+            padding: 30px 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            color: #592212;
+            font-size: 18px;
+            font-weight: 500;
+
+            div {
+                &:hover {
+                    background-color: #592212;
+                    transition: background-color 1s;
+                    color: #fff;
+                    border-radius: 5px;           
+                }
+            }
+
+            .title-div {
+                padding-bottom: 20px;
+            }
+
+            .price {
+                color: #b68834;
+                font-size: 18px;
+                font-weight: 300;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 }

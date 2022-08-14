@@ -44,9 +44,10 @@
           font-size: 40px;
           transition: font-size 0.7s; }
       .contenedorIndex .headerIndex .menuIndex a {
+        border-radius: 15%;
+        background-color: blanchedalmond;
         text-decoration: none;
-        color: darksalmon;
-        padding-right: 55px;
+        color: #592212;
         font-family: 'Amatic SC', cursive;
         /*google font importada en el html*/ }
         .contenedorIndex .headerIndex .menuIndex a:hover {
@@ -174,10 +175,10 @@
 .contenedorNosotros {
   height: max-content;
   display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr;
-  grid-template-rows: 1fr 2fr 0.5fr;
-  grid-template-areas: "logoNosotros menuNosotros menuNosotros" "textoNosotros textoNosotros textoNosotros" "footerNosotros footerNosotros footerNosotros";
-  background-image: url(https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2084&q=80);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr 3fr 0.5fr;
+  grid-template-areas: "logoNosotros menuNosotros menuNosotros" "h1Nosotros h1Nosotros h1Nosotros" "parrafoNosotros parrafoNosotros parrafoNosotros" "footerNosotros footerNosotros footerNosotros";
+  background-image: url(https://wallpapercrafter.com/sizes/1920x1080/273537-coffee-shop-coffe-cup-cup-and-saucer-and-table-hd.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -202,9 +203,10 @@
           font-size: 40px;
           transition: font-size 0.7s; }
       .contenedorNosotros .headerNosotros .menuNosotros a {
+        border-radius: 15%;
+        background-color: blanchedalmond;
         text-decoration: none;
-        color: darksalmon;
-        padding-right: 55px;
+        color: #592212;
         font-family: 'Amatic SC', cursive;
         /*google font importada en el html*/ }
         .contenedorNosotros .headerNosotros .menuNosotros a:hover {
@@ -221,84 +223,91 @@
       flex-direction: row;
       justify-items: center;
       align-items: center; }
-  .contenedorNosotros .mainNosotros {
-    grid-area: textoNosotros;
-    color: antiquewhite;
-    font-style: oblique;
+  .contenedorNosotros .h1Nosotros {
+    grid-area: h1Nosotros;
     display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 35px;
+    font-family: 'Amatic SC', cursive;
+    color: darksalmon; }
+  .contenedorNosotros .divNosotros {
+    grid-area: parrafoNosotros;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 100px; }
+    .contenedorNosotros .divNosotros p {
+      grid-area: textoNosotros;
+      font-size: 18x;
+      font-family: 'Edu SA Beginner', cursive; }
+    .contenedorNosotros .divNosotros .p1 {
+      position: relative;
+      background-color: #285AEB; }
+    .contenedorNosotros .divNosotros .p2 {
+      background-color: #d6249f; }
+    .contenedorNosotros .divNosotros .p3 {
+      background-color: #fdf497; }
+
+.footerNosotros {
+  grid-area: footerNosotros;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 230px;
+  align-items: center;
+  font-family: 'Amatic SC', cursive;
+  background: rgba(0, 0, 0, 0.24); }
+
+.fondoInstagram {
+  background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+
+.fondo-twitter {
+  background-color: #55acee; }
+
+.fondo-facebook {
+  background-color: #4267B2; }
+
+@media screen and (max-width: 425px) {
+  .contenedorNosotros {
+    grid-template-columns: 100%;
+    grid-template-rows: 0.5fr 0.2fr 0.1fr 1px;
+    grid-template-areas: "logoIndex" "menuNosotros" "textoNosotros" "footerNosotros"; }
+  .headerNosotros .menuNosotros {
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 5px; }
+    .headerNosotros .menuNosotros li {
+      padding-right: 10px;
+      font-size: 20px; }
+    .headerNosotros .menuNosotros a {
+      padding-right: 10px;
+      font-size: 20px; }
+  .logoNosotros img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    margin-left: 90px;
+    flex-direction: row;
+    justify-items: center;
     align-items: center;
-    height: 550px; }
-    .contenedorNosotros .mainNosotros .divNosotros {
-      display: flex;
-      flex-direction: column; }
-      .contenedorNosotros .mainNosotros .divNosotros .backgroundTextoNosotros {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 550px; }
-        .contenedorNosotros .mainNosotros .divNosotros .backgroundTextoNosotros .h1Nosotros {
-          display: flex;
-          flex-direction: row;
-          align-content: center;
-          justify-content: center;
-          font-size: 35px;
-          grid-area: h1;
-          font-family: 'Amatic SC', cursive; }
-        .contenedorNosotros .mainNosotros .divNosotros .backgroundTextoNosotros .textoNosotros {
-          font-size: 18x;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-content: flex-start;
-          font-family: 'Edu SA Beginner', cursive; }
-    .contenedorNosotros .mainNosotros .footerNosotros {
-      grid-area: footerNosotros;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-end;
-      justify-content: flex-end;
-      color: antiquewhite; }
-  @media screen and (max-width: 425px) {
-    .contenedorNosotros .contenedorNosotros {
-      grid-template-columns: 100%;
-      grid-template-rows: 0.5fr 0.2fr 0.1fr 1px;
-      grid-template-areas: "logoIndex" "menuNosotros" "textoNosotros" "footerNosotros"; }
-    .contenedorNosotros .headerNosotros .menuNosotros {
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      margin-left: 5px; }
-      .contenedorNosotros .headerNosotros .menuNosotros li {
-        padding-right: 10px;
-        font-size: 20px; }
-      .contenedorNosotros .headerNosotros .menuNosotros a {
-        padding-right: 10px;
-        font-size: 20px; }
-    .contenedorNosotros .logoNosotros img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      display: flex;
-      margin-left: 90px;
-      flex-direction: row;
-      justify-items: center;
-      align-items: center;
-      margin-top: 15px;
-      margin-bottom: 0px; }
-    .contenedorNosotros .textoNosotros {
-      background: rgba(0, 0, 0, 0.24); }
-    .contenedorNosotros .footerNosotros {
-      align-items: center;
-      justify-items: center;
-      color: antiquewhite; } }
+    margin-top: 15px;
+    margin-bottom: 0px; }
+  .textoNosotros {
+    background: rgba(0, 0, 0, 0.24); }
+  .footerNosotros {
+    align-items: center;
+    justify-items: center;
+    color: antiquewhite; } }
 
 .contenedorCarta {
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr;
   grid-template-rows: 1fr 0.5fr 7fr;
   grid-template-areas: "logoCarta menuCarta menuCarta" "tituloCarta tituloCarta tituloCarta" "mainCarta mainCarta mainCarta";
-  background-image: url(https://images.unsplash.com/photo-1463797221720-6b07e6426c24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29mZmVlJTIwc2hvcCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80);
+  background-image: url(https://rare-gallery.com/uploads/posts/519094-basket-chalkboard.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -325,7 +334,7 @@
       list-style-type: none;
       display: flex;
       flex-wrap: wrap;
-      font-size: 30px;
+      font-size: 35px;
       margin-top: 80px;
       padding-right: 55px; }
       .contenedorCarta .headerCarta .menuCarta li {
@@ -341,7 +350,7 @@
         border-radius: 15%;
         background-color: blanchedalmond;
         text-decoration: none;
-        color: darksalmon;
+        color: #592212;
         font-family: 'Amatic SC', cursive;
         /*google font importada en el html*/ }
         .contenedorCarta .headerCarta .menuCarta a:hover {
@@ -377,3 +386,30 @@
     background-color: #592212; }
   100% {
     background-color: #A27B5C; } }
+  .contenedorCarta .mainCarta {
+    grid-area: mainCarta;
+    display: flex;
+    align-content: center;
+    justify-content: center; }
+    .contenedorCarta .mainCarta .menu-area .single-menu {
+      background-color: #fff;
+      border-radius: 25px;
+      padding: 30px 30px;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      color: #592212;
+      font-size: 18px;
+      font-weight: 500; }
+      .contenedorCarta .mainCarta .menu-area .single-menu div:hover {
+        background-color: #592212;
+        transition: background-color 1s;
+        color: #fff;
+        border-radius: 5px; }
+      .contenedorCarta .mainCarta .menu-area .single-menu .title-div {
+        padding-bottom: 20px; }
+      .contenedorCarta .mainCarta .menu-area .single-menu .price {
+        color: #b68834;
+        font-size: 18px;
+        font-weight: 300; }
+      .contenedorCarta .mainCarta .menu-area .single-menu p {
+        margin-bottom: 0; }
