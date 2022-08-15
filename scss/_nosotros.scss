@@ -16,7 +16,7 @@
 
     .headerNosotros {
         grid-area: menuNosotros;
-        display: flex;  
+        display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-content: flex-end;
@@ -158,14 +158,13 @@
     align-items: center;
 
     p {
-        font-size: 20px;    
+        font-size: 20px;
         padding: 50px;
         color: antiquewhite;
         text-align: justify;
         background-color: #131a0c48;
         border-radius: 5%;
     }
-}
 }
 
 .footerNosotros {
@@ -193,60 +192,80 @@ $color in $redes {
     }
 }
 
-@media screen and (max-width: 425px) {
-    .contenedorNosotros {
-        grid-template-columns: 100%;
-        grid-template-rows: 0.5fr 0.2fr 0.1fr 1px;
-        grid-template-areas:
-            "logoIndex"
-            "menuNosotros"
-            "textoNosotros"
-            "footerNosotros";
+@media screen and(max-width: 768px) {
+
+    height: max-content;
+    display: grid;
+    grid-template-columns: 25% 35% 40%;
+    grid-template-rows: 0.5fr 0.1fr 1fr 0.5fr 0.1fr;
+    grid-template-areas:
+        "menuNosotros menuNosotros menuNosotros"
+        "tituloNosotros tituloNosotros tituloNosotros"
+        "parrafo1 parrafo1 parrafo1"
+        "parrafo2 parrafo2 parrafo2"
+        "footerNosotros footerNosotros footerNosotros";
+
+    .headerNosotros {
+        justify-content: center;
+
+        .menuNosotros {
+            font-size: 35px;
+        }
+    }
+
+}
+
+@media screen and(max-width: 500px) {
+    height: max-content;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.5fr 0.2fr 1fr 1fr 0.5fr 0.1fr;
+    grid-template-areas:
+        "logoNosotros"
+        "tituloNosotros"
+        "parrafo1"
+        "parrafo2"
+        "menuNosotros"
+        "footerNosotros";
+
+    .logoNosotros {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+
+        img {
+            margin-left: 0px;
+        }
+    }
+
+    .tituloNosotros {
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
     }
 
     .headerNosotros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         .menuNosotros {
+            list-style-type: none;
+            display: flex;
             flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            margin-left: 5px;
-
-            li {
-                padding-right: 10px;
-                font-size: 20px;
-            }
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 50px;
 
             a {
-                padding-right: 10px;
-                font-size: 20px;
+                color: #592212;
             }
         }
-    }
-
-    .logoNosotros {
-
-        img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            display: flex;
-            margin-left: 90px;
-            flex-direction: row;
-            justify-items: center;
-            align-items: center;
-            margin-top: 15px;
-            margin-bottom: 0px;
-        }
-    }
-
-    .textoNosotros {
-        background: rgba(0, 0, 0, 0.24);
     }
 
     .footerNosotros {
-        align-items: center;
-        justify-items: center;
-        color: antiquewhite;
+        margin-top: 80px;
     }
+}
 }
