@@ -1,11 +1,11 @@
 .contenedorIndex {
     height: max-content;
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1.58fr 0.5fr;
     grid-template-areas:
         "logoIndex menuIndex menuIndex"
-        "tituloIndex tituloIndex tituloIndex"
+        "tituloIndex fraseIndex fraseIndex"
         "footerIndex footerIndex footerIndex";
 
     background-image: url(https://image.architonic.com/pro2-3/20229014/cw-coffee-bar-counter-03-main-211116-pro-b-arcit18.jpg);
@@ -83,7 +83,7 @@
     }
 
     $colorFuente: (
-        color: antiquewhite
+        color: rgba(250, 235, 215, 0.486)
     );
 
 .tituloIndex {
@@ -94,7 +94,6 @@
     justify-items: center;
     margin-top: 150px;
     margin-left: 30px;
-    font-size: 55px;
     font-family: 'Amatic SC', cursive;
     color: map-get($colorFuente, color);
 
@@ -109,7 +108,22 @@
         animation-iteration-count: infinite;
         animation-timing-function: linear;
         /*enlace animacion texto bievenida*/
-        font-size: 90px;
+        font-size: 120px;
+    }
+}
+
+.fraseIndex {
+    grid-area: fraseIndex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 45px;
+    font-weight: 300;
+
+    p {
+        color: antiquewhite;
     }
 }
 
@@ -140,12 +154,10 @@
     grid-area: footerIndex;
 
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-content: center;
     margin-top: 230px;
-    align-items: center;
     font-family: 'Amatic SC', cursive;
-    background: rgba(0, 0, 0, 0.24);
 }
 
 .fondoInstagram {

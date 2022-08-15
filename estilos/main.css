@@ -1,9 +1,9 @@
 .contenedorIndex {
   height: max-content;
   display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr;
-  grid-template-rows: 1fr 3fr 1fr;
-  grid-template-areas: "logoIndex menuIndex menuIndex" "tituloIndex tituloIndex tituloIndex" "footerIndex footerIndex footerIndex";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1.58fr 0.5fr;
+  grid-template-areas: "logoIndex menuIndex menuIndex" "tituloIndex fraseIndex fraseIndex" "footerIndex footerIndex footerIndex";
   background-image: url(https://image.architonic.com/pro2-3/20229014/cw-coffee-bar-counter-03-main-211116-pro-b-arcit18.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,9 +60,8 @@
     justify-items: center;
     margin-top: 150px;
     margin-left: 30px;
-    font-size: 55px;
     font-family: 'Amatic SC', cursive;
-    color: antiquewhite; }
+    color: rgba(250, 235, 215, 0.486); }
     .contenedorIndex .tituloIndex h1 {
       border-radius: 15%;
       background: rgba(57, 25, 15, 0.5);
@@ -73,7 +72,18 @@
       animation-iteration-count: infinite;
       animation-timing-function: linear;
       /*enlace animacion texto bievenida*/
-      font-size: 90px; }
+      font-size: 120px; }
+  .contenedorIndex .fraseIndex {
+    grid-area: fraseIndex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 45px;
+    font-weight: 300; }
+    .contenedorIndex .fraseIndex p {
+      color: antiquewhite; }
 
 @keyframes animacionTitulo {
   0% {
@@ -89,12 +99,10 @@
   .contenedorIndex .footerIndex {
     grid-area: footerIndex;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-content: center;
     margin-top: 230px;
-    align-items: center;
-    font-family: 'Amatic SC', cursive;
-    background: rgba(0, 0, 0, 0.24); }
+    font-family: 'Amatic SC', cursive; }
   .contenedorIndex .fondoInstagram {
     background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
   .contenedorIndex .fondo-twitter {
