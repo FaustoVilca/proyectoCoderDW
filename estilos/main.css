@@ -141,46 +141,27 @@
         .contenedorIndex .headerIndex .menuIndex a {
           padding-right: 30px;
           color: antiquewhite; } }
-  @media screen and (max-width: 320px) {
-    .contenedorIndex .contenedorIndex {
+  @media screen and (max-width: 500px) {
+    .contenedorIndex {
+      height: max-content;
+      display: grid;
       grid-template-columns: 100%;
-      grid-template-rows: 0.5fr 0.5fr 0.1fr 0.1fr;
-      grid-template-areas: "logoIndex" "tituloIndex" "menuIndex" "footerIndex"; }
-    .contenedorIndex .logoIndex {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-content: center; }
-      .contenedorIndex .logoIndex img {
-        margin-left: 0px; }
-    .contenedorIndex .headerIndex {
-      margin-left: -50px;
-      padding: 5px; }
+      grid-template-rows: 1fr 0.5fr 0.5fr 2fr 0.5fr;
+      grid-template-areas: "logoIndex" "tituloIndex" "fraseIndex" "menuIndex" "footerIndex"; }
+      .contenedorIndex .logoIndex {
+        align-items: center; }
+      .contenedorIndex .tituloIndex h1 {
+        font-size: 100px; }
       .contenedorIndex .headerIndex .menuIndex {
         list-style-type: none;
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         flex-direction: column;
-        margin-top: 0px;
-        background-color: transparent;
-        padding-top: 75px; }
-        .contenedorIndex .headerIndex .menuIndex li {
-          text-decoration: none;
-          color: bisque;
-          padding-right: 0px; }
+        align-content: flex-start;
+        font-size: 30px;
+        background-color: transparent; }
         .contenedorIndex .headerIndex .menuIndex a {
-          text-decoration: none;
-          color: bisque;
-          background-color: #592212;
-          padding-right: 0px; }
-    .contenedorIndex .tituloIndex {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-top: 0px;
-      margin-left: 0px; }
-    .contenedorIndex .footerIndex {
-      align-items: center; } }
+          color: #592212; } }
 
 .contenedorNosotros {
   height: max-content;
