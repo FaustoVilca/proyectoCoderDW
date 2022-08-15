@@ -226,7 +226,7 @@ $color in $redes {
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 320px) {
     .contenedorIndex {
         grid-template-columns: 100%;
         grid-template-rows: 0.5fr 0.5fr 0.1fr 0.1fr;

@@ -6,36 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservas</title>
-    <link rel="stylesheet" href="../estilos/estilos.css">
-    <meta name="keywords" content="cafe, coffee, bar, capuccino, latte, cake, cafeteria, reserva, merienda">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../estilos/main.css"">
+    <meta name=" keywords" content="cafe, coffee, bar, capuccino, latte, cake, cafeteria, reserva, merienda">
 </head>
 
-<body>
-    <header class="reservas__header">
-        <nav>
-            <h1 class="reservas__nombre">Fausto Cafe</h1>
-            <img src="https://images.vexels.com/media/users/3/172806/raw/36f105c7bc57e2a043fca8731e265c38-diseno-de-logotipo-de-cafeteria.jpg"
-                width="250" height="150">
-            <hr>
-            <h2 class="reservas__titulo">Reservas</h2>
-            <ul class="reservas__menu"> <!--Inicio Menu navegacion-->
-                <hr class="division">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="carta.html">Carta</a></li>
-                <li><a href="galeria.html">Galeria</a>
-                    <ul class="reservas__submenu"> <!--Submenu galeria-->
-                        <li><a href="ambientes.html">Ambientes</a></li>
-                        <li><a href="acompanamientos.html">Platos</a></li>
-                        <li><a href="cafeteria.html">Cafeteria</a></li>
-                    </ul>
-                </li>
-                <li><a href="reservas.html">Reservas</a></li>
-            </ul>
-        </nav>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+</style>
+
+<body class="contenedorReserva">
+    <div class="logoReserva">
+        <img class="imglogoReserva"
+            src="data:image/png;base64,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">
+    </div>
+    <header class="menuReserva">
+        <ul>
+            <!--Inicio Menu navegacion-->
+            <li><a href="../index.html">INICIO</a></li>
+            <li><a href="nosotros.html">NOSOTROS</a></li>
+            <li><a href="carta.html">CARTA</a></li>
+            <li><a href="galeria.html">GALERIA</a></li>
+            <li><a href="reservas.html">RESERVAS</a></li>
+        </ul>
     </header>
-    <main class="main__reservas">
-        <form class="form__reservas"> <!--Inicio formulario de reservas-->
+    <div class="tituloReserva">
+        <h1 class="h1Carta">Reservas</h1>
+    </div>
+    <main class="mainReserva">
+        <form class="formReserva">
+            <!--Inicio formulario de reservas-->
             <label for="nombre"> Nombre: </label>
             <input type="text" placeholder="Ingrese su nombre" name="nombre">
             <label for="contraseña"> Contraseña: </label>
@@ -43,26 +43,38 @@
             <label for="email"> E-mail: </label>
             <input type="email" name="id" placeholder="Ingrese su e-mail" name="email">
             <label for="cantidad"> Comensales: </label>
-            <input type="number" placeholder="Cantidad de comensales" name="cantidad"->
-            <label for="ninos">¿Asisten niños? </label>
-            <input type="radio" value="Si" name="ninos"> Si
-            <input type="radio" value="No" name="ninos"> No
-            <label for="horario"> Horario: </label>
-            <select name="horario"> <!--caja desplegable-->
-                <option value="1"> Desayuno </option>
-                <option value="2"> Almuerzo </option>
-                <option value="3"> Merienda </option>
-                <option value="3"> Cena </option>
-            </select>
+            <input type="number" placeholder="Cantidad de comensales" name="cantidad" ->
+            <div class="divNinos"><label class="labelNinos" for="ninos">¿Asisten niños?
+                    <input type="radio" value="Si" name="ninos"> Si
+                    <input type="radio" value="No" name="ninos"> No
+                </label>
+            </div>
+            <div class="divHorario">
+                <label class="labelHorario" for="horario"> Horario:
+                    <select name="horario">
+                        <!--caja desplegable-->
+                        <option value="1"> Desayuno </option>
+                        <option value="2"> Almuerzo </option>
+                        <option value="3"> Merienda </option>
+                        <option value="3"> Cena </option>
+                    </select>
+                </label>
+            </div>
             <label for="mensaje"> Comentarios extras: </label>
-            <textarea name="" id="" cols="30" rows="10" name="mensaje"></textarea> <!--Comentarios extras-->
-            <input type="checkbox" name="" id=""> Deseo recibir promociones por e-mail
-            <input type="checkbox" name="" id=""> Acepto recibir llamada en caso de ser necesario
-            <input type="submit" value="Solicitar reserva">
-            <input type="reset" value="Borrar datos">
+            <textarea name="" id="" cols="30" rows="10" name="mensaje"></textarea>
+            <!--Comentarios extras-->
+            <div class="divDeseo">
+                <input type="checkbox" name="" id=""> Deseo recibir promociones por e-mail
+                <input type="checkbox" name="" id=""> Acepto recibir llamada en caso de ser necesario
+            </div>
+            <div>
+                <input type="submit" value="Solicitar reserva">
+                <input type="reset" value="Borrar datos">
+            </div>
         </form>
     </main>
-    <footer class="footer__reservas">Córdoba, Argentina</footer>
+    <footer class="footerReserva">Rafael Nuñes 4238 - Córdoba, Argentina</footer>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
