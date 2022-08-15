@@ -2,11 +2,11 @@
     height: max-content;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 0.5fr 3fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr 2fr 0.5fr;
     grid-template-areas:
         "logoNosotros menuNosotros menuNosotros"
-        "h1Nosotros h1Nosotros h1Nosotros"
-        "parrafoNosotros parrafoNosotros parrafoNosotros"
+        "tituloNosotros tituloNosotros tituloNosotros"
+        "parrafo1 parrafo1 parrafo2"
         "footerNosotros footerNosotros footerNosotros";
 
     background-image: url(https://wallpapercrafter.com/sizes/1920x1080/273537-coffee-shop-coffe-cup-cup-and-saucer-and-table-hd.jpg);
@@ -78,42 +78,100 @@
         }
     }
 
-    .h1Nosotros {
-        grid-area: h1Nosotros;
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        font-size: 35px;
-        font-family: 'Amatic SC', cursive;
-        color: darksalmon;
+    $colorFuente: (
+        color: antiquewhite
+    );
+
+.tituloNosotros {
+
+    grid-area: tituloNosotros;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    font-family: 'Amatic SC', cursive;
+    color: map-get($colorFuente, color);
+
+    h1 {
+        font-size: 50px;
+        border-radius: 15%;
+        background: rgba(57, 25, 15, 0.5);
+        /*rgb para background opacity*/
+
+        animation-name: animacionTitulo;
+        animation-duration: 6s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        /*enlace animacion tecto bievenida*/
+    }
+}
+
+/*keyframe para animacion del h1 con texto de bienvenida*/
+@keyframes animacionTitulo {
+    0% {
+        background-color: #A27B5C;
     }
 
-    .divNosotros {
-        grid-area: parrafoNosotros;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        padding: 100px;
-
-        p {
-            grid-area: textoNosotros;
-            font-size: 18x;
-            font-family: 'Edu SA Beginner', cursive;
-        }
-
-        .p1{
-            position: relative;
-            background-color: #285AEB;
-        }
-
-        .p2{
-            background-color: #d6249f;
-        }
-
-        .p3{
-            background-color: #fdf497;
-        }
+    25% {
+        background-color: #592212;
     }
+
+    50% {
+        background-color: #A27B5C;
+    }
+
+    75% {
+        background-color: #592212;
+    }
+
+    100% {
+        background-color: #A27B5C;
+    }
+}
+
+
+.parrafo1 {
+    grid-area: parrafo1;
+    font-size: 18x;
+    font-family: 'Edu SA Beginner', cursive;
+    display: flex;
+    justify-items: flex-end;
+    align-items: flex-start;
+    padding-left: 40px;
+
+    p {
+        width: 40%;
+        height: 45%;
+        font-size: 20px;
+        padding: 50px;
+        padding-top: 0px;
+        color: antiquewhite;
+        text-align: justify;
+        background-color: #131a0c48;
+        border-radius: 5%;
+    }
+}
+
+.parrafo2 {
+    grid-area: parrafo2;
+    font-size: 18x;
+    font-family: 'Edu SA Beginner', cursive;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+    p {
+        width: 75%;
+        height: 65%;
+        font-size: 20px;
+        padding: 50px;
+        color: antiquewhite;
+        text-align: justify;
+        background-color: #131a0c48;
+        border-radius: 5%;
+    }
+}
 }
 
 .footerNosotros {
