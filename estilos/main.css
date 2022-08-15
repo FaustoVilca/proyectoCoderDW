@@ -112,35 +112,23 @@
   .contenedorIndex .fondo-facebook {
     background-color: #4267B2; }
   @media screen and (max-width: 768px) {
-    .contenedorIndex .contenedorIndex {
+    .contenedorIndex {
       grid-template-columns: 50% 50%;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-areas: "logoIndex tituloIndex" "menuIndex menuIndex" "footerIndex footerIndex"; }
-    .contenedorIndex .logoIndex {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-content: center; }
-      .contenedorIndex .logoIndex img {
-        margin-left: 0px; }
-    .contenedorIndex .tituloIndex {
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      margin-top: 0px;
-      margin-left: 0px; }
-    .contenedorIndex .headerIndex {
-      align-content: center;
-      justify-content: center;
-      margin-right: 20px; }
-      .contenedorIndex .headerIndex .menuIndex {
-        background: rgba(57, 25, 15, 0.5); }
-        .contenedorIndex .headerIndex .menuIndex li {
-          padding-right: 30px;
-          color: antiquewhite; }
-        .contenedorIndex .headerIndex .menuIndex a {
-          padding-right: 30px;
-          color: antiquewhite; } }
+      grid-template-rows: 0.5fr 0.5fr 1.5fr 1fr;
+      grid-template-areas: "logoIndex tituloIndex" "fraseIndex fraseIndex" "menuIndex menuIndex" "footerIndex footerIndex"; }
+      .contenedorIndex .tituloIndex h1 {
+        font-size: 80px; }
+      .contenedorIndex .fraseIndex {
+        justify-content: center;
+        font-size: 40px; }
+      .contenedorIndex .headerIndex {
+        justify-content: center;
+        align-content: flex-end; }
+        .contenedorIndex .headerIndex .menuIndex {
+          flex-direction: row;
+          justify-content: center;
+          align-content: center;
+          font-size: 40px; } }
   @media screen and (max-width: 500px) {
     .contenedorIndex {
       height: max-content;
@@ -149,7 +137,12 @@
       grid-template-rows: 1fr 0.5fr 0.5fr 2fr 0.5fr;
       grid-template-areas: "logoIndex" "tituloIndex" "fraseIndex" "menuIndex" "footerIndex"; }
       .contenedorIndex .logoIndex {
-        align-items: center; }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center; }
+        .contenedorIndex .logoIndex img {
+          margin-left: 0px; }
       .contenedorIndex .tituloIndex h1 {
         font-size: 100px; }
       .contenedorIndex .headerIndex .menuIndex {
