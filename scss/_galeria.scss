@@ -1,24 +1,24 @@
-.contenedorCarta {
+.contenedorGaleria {
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr;
-    grid-template-rows: 1fr 0.5fr 7fr;
+    grid-template-columns: 0.8fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 2.5fr 2.5fr 2.5fr 2.5fr 0.1fr;
+    gap: 0px 0px;
     grid-template-areas:
-        "logoCarta menuCarta menuCarta"
-        "tituloCarta tituloCarta tituloCarta"
-        "mainCarta mainCarta mainCarta";
-
-    background-image: url(../multimedia/519094-basket-chalkboard.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+        "logoGaleria menuGaleria menuGaleria menuGaleria"
+        "tituloGaleria tituloGaleria tituloGaleria tituloGaleria"
+        "label1 fotosCafe fotosCafe fotosCafe"
+        "label1 fotosCafe2 fotosCafe2 fotosCafe2"
+        "fotosTortas fotosTortas fotosTortas label2"
+        "fotosTortas2 fotosTortas2 fotosTortas2 label2"
+        "footerGaleria footerGaleria footerGaleria footerGaleria";
 
     @mixin sizes($width, $height) {
         width: $width;
         height: $height;
     }
 
-    .logoCarta {
-        grid-area: logoCarta;
+    .logoGaleria {
+        grid-area: logoGaleria;
         margin-top: 20px;
 
         img {
@@ -32,14 +32,14 @@
         }
     }
 
-    .headerCarta {
-        grid-area: menuCarta;
+    .menuGaleria {
+        grid-area: menuGaleria;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-content: flex-end;
 
-        .menuCarta {
+        ul {
             list-style-type: none;
             display: flex;
             flex-wrap: wrap;
@@ -77,14 +77,12 @@
         }
     }
 
-
     $colorFuente: (
         color: antiquewhite
     );
 
-.tituloCarta {
-
-    grid-area: tituloCarta;
+.tituloGaleria {
+    grid-area: tituloGaleria;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -130,47 +128,103 @@
     }
 }
 
-.mainCarta {
-    grid-area: mainCarta;
+.label1Galeria {
+    grid-area: label1;
+    font-size: 70px;
     display: flex;
-    align-content: center;
     justify-content: center;
+    align-items: center;
+    font-family: 'Amatic SC', cursive;
+    background-color: antiquewhite;
+}
 
-    .menu-area {
+.label2Galeria {
+    grid-area: label2;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Amatic SC', cursive;
+    background-color: #A27B5C;
+}
 
-        .single-menu {
-            background-color: #fff;
-            border-radius: 25px;
-            padding: 30px 30px;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            color: #592212;
-            font-size: 18px;
-            font-weight: 500;
+.mainGaleria {
 
-            div {
-                &:hover {
-                    background-color: #592212;
-                    transition: background-color 1s;
-                    color: #fff;
-                    border-radius: 5px;           
-                }
-            }
+    grid-area: fotosCafe;
+    background-color: antiquewhite;
 
-            .title-div {
-                padding-bottom: 20px;
-            }
+    .fotosCafe {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 100px;
 
-            .price {
-                color: #b68834;
-                font-size: 18px;
-                font-weight: 300;
-            }
-
-            p {
-                margin-bottom: 0;
-            }
+        img {
+            @include sizes(400px, 350px);
+            border-radius: 50%;
         }
     }
+}
+
+.mainGaleria2 {
+
+    grid-area: fotosCafe2;
+    background-color: antiquewhite;
+
+    .fotosCafe2 {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 100px;
+
+        img {
+            @include sizes(350px, 350px);
+            border-radius: 50%;
+        }
+    }
+}
+
+.mainGaleria3 {
+
+    grid-area: fotosTortas;
+    background-color: #A27B5C;
+
+    .fotosTortas {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 100px;
+
+        img {
+            @include sizes(480px, 420px);
+            border-radius: 50%;
+        }
+    }
+}
+
+.mainGaleria4 {
+
+    grid-area: fotosTortas2;
+    background-color: #A27B5C;
+
+    .fotosTorta2 {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 100px;
+
+        img {
+            @include sizes(500px, 400px);
+            border-radius: 50%;
+        }
+    }
+}
+
+.footerGaleria {
+    grid-area: footerGaleria;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    color: black;
+    font-family: 'Amatic SC', cursive;
+    background-color: antiquewhite;
+    font-size: 45x;
 }
 }

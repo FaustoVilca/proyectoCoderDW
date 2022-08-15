@@ -2,21 +2,21 @@
     height: max-content;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 0.5fr 2fr 0.5fr;
+    grid-template-rows: 1fr 0.2fr 1.5fr 0.5fr;
     grid-template-areas:
         "logoNosotros menuNosotros menuNosotros"
         "tituloNosotros tituloNosotros tituloNosotros"
-        "parrafo1 parrafo1 parrafo2"
+        "parrafo1 - parrafo2"
         "footerNosotros footerNosotros footerNosotros";
 
-    background-image: url(https://wallpapercrafter.com/sizes/1920x1080/273537-coffee-shop-coffe-cup-cup-and-saucer-and-table-hd.jpg);
+    background-image: url(../multimedia/273537-coffee-shop-coffe-cup-cup-and-saucer-and-table-hd.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
     .headerNosotros {
         grid-area: menuNosotros;
-        display: flex;
+        display: flex;  
         flex-direction: row;
         justify-content: flex-end;
         align-content: flex-end;
@@ -136,16 +136,12 @@
     font-size: 18x;
     font-family: 'Edu SA Beginner', cursive;
     display: flex;
-    justify-items: flex-end;
-    align-items: flex-start;
-    padding-left: 40px;
+    justify-items: center;
+    align-items: center;
 
     p {
-        width: 40%;
-        height: 45%;
         font-size: 20px;
         padding: 50px;
-        padding-top: 0px;
         color: antiquewhite;
         text-align: justify;
         background-color: #131a0c48;
@@ -162,9 +158,7 @@
     align-items: center;
 
     p {
-        width: 75%;
-        height: 65%;
-        font-size: 20px;
+        font-size: 20px;    
         padding: 50px;
         color: antiquewhite;
         text-align: justify;
@@ -176,14 +170,11 @@
 
 .footerNosotros {
     grid-area: footerNosotros;
-
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-content: center;
     margin-top: 230px;
-    align-items: center;
     font-family: 'Amatic SC', cursive;
-    background: rgba(0, 0, 0, 0.24);
 }
 
 .fondoInstagram {
