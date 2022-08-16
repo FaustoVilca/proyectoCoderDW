@@ -314,10 +314,7 @@
         flex-direction: column;
         align-items: center; }
         .contenedorNosotros .headerNosotros .menuNosotros {
-          list-style-type: none;
-          display: flex;
           flex-direction: column;
-          flex-wrap: wrap;
           align-items: center;
           font-size: 50px; }
           .contenedorNosotros .headerNosotros .menuNosotros a {
@@ -436,6 +433,56 @@
         font-weight: 300; }
       .contenedorCarta .mainCarta .menu-area .single-menu p {
         margin-bottom: 0; }
+  @media screen and (max-width: 768px) {
+    .contenedorCarta {
+      height: max-content;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 0.1fr 0.2fr 0.1fr 1fr;
+      grid-template-areas: "logoCarta logoCarta" "menuCarta menuCarta" "tituloCarta tituloCarta" "mainCarta mainCarta"; }
+      .contenedorCarta .logoCarta {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .contenedorCarta .logoCarta img {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-left: 0px; }
+      .contenedorCarta .headerCarta {
+        flex-direction: row;
+        justify-content: center; }
+        .contenedorCarta .headerCarta .menuCarta {
+          display: flex;
+          flex-wrap: wrap;
+          font-size: 35px;
+          margin-top: 80px;
+          padding-right: 0px; } }
+  @media screen and (max-width: 500px) {
+    .contenedorCarta {
+      height: max-content;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 0.1fr 0.2fr 0.1fr 1fr;
+      grid-template-areas: "logoCarta logoCarta" "menuCarta menuCarta" "tituloCarta tituloCarta" "mainCarta mainCarta"; }
+      .contenedorCarta .logoCarta {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .contenedorCarta .logoCarta img {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-left: 0px; }
+      .contenedorCarta .headerCarta {
+        display: flex;
+        justify-content: flex-start; }
+        .contenedorCarta .headerCarta .menuCarta {
+          flex-direction: column;
+          align-items: flex-start;
+          font-size: 50px; }
+          .contenedorCarta .headerCarta .menuCarta a {
+            color: #592212; } }
 
 .contenedorGaleria {
   display: grid;
@@ -588,6 +635,114 @@
     font-family: 'Amatic SC', cursive;
     background-color: antiquewhite;
     font-size: 45x; }
+  @media screen and (max-width: 768px) {
+    .contenedorGaleria {
+      height: max-content;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 0.1fr 0.2fr 0.1fr 0.1fr 1fr 1fr 0.1fr 1fr 1fr 0.1fr;
+      grid-template-areas: "logoGaleria logoGaleria" "menuGaleria menuGaleria" "tituloGaleria tituloGaleria" "label1 label1" "fotosCafe fotosCafe" "fotosCafe2 fotosCafe2" "label2 label2" "fotosTortas fotosTortas" "fotosTortas2 fotosTortas2" "footerGaleria footerGaleria"; }
+      .contenedorGaleria .logoGaleria {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .contenedorGaleria .logoGaleria img {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-left: 0px; }
+      .contenedorGaleria .menuGaleria {
+        flex-direction: row;
+        justify-content: center;
+        align-content: center; }
+        .contenedorGaleria .menuGaleria ul {
+          flex-direction: row;
+          justify-content: center;
+          align-content: center;
+          flex-wrap: wrap;
+          font-size: 35px;
+          margin-top: 0px;
+          padding-right: 0px; }
+      .contenedorGaleria .mainGaleria .fotosCafe {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .contenedorGaleria .mainGaleria .fotosCafe img {
+          width: 350px;
+          height: 300px; }
+      .contenedorGaleria .mainGaleria2 .fotosCafe2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .contenedorGaleria .mainGaleria2 .fotosCafe2 img {
+          width: 300px;
+          height: 300px; }
+      .contenedorGaleria .mainGaleria3 .fotosTortas {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .contenedorGaleria .mainGaleria3 .fotosTortas img {
+          width: 430px;
+          height: 370px; }
+      .contenedorGaleria .mainGaleria4 .fotosTorta2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .contenedorGaleria .mainGaleria4 .fotosTorta2 img {
+          width: 450px;
+          height: 350px; } }
+  @media screen and (max-width: 500px) {
+    .contenedorGaleria {
+      height: max-content;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 0.2fr 0.1fr 0.1fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.1fr;
+      grid-template-areas: "logoGaleria" "menuGaleria" "tituloGaleria" "label1" "fotosCafe" "fotosCafe2" "label2" "fotosTortas" "fotosTortas2" "footerGaleria"; }
+      .contenedorGaleria .logoGaleria {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .contenedorGaleria .logoGaleria img {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-left: 0px; }
+      .contenedorGaleria .menuGaleria {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: flex-start; }
+        .contenedorGaleria .menuGaleria ul {
+          flex-direction: column;
+          justify-content: flex-start;
+          align-content: flex-start;
+          flex-wrap: wrap;
+          font-size: 35px;
+          margin-top: 0px;
+          padding-right: 0px; }
+      .contenedorGaleria .mainGaleria .fotosCafe {
+        display: flex;
+        flex-direction: column; }
+        .contenedorGaleria .mainGaleria .fotosCafe img {
+          width: 350px;
+          height: 300px; }
+      .contenedorGaleria .mainGaleria2 .fotosCafe2 {
+        display: flex;
+        flex-direction: column; }
+        .contenedorGaleria .mainGaleria2 .fotosCafe2 img {
+          width: 300px;
+          height: 300px; }
+      .contenedorGaleria .mainGaleria3 .fotosTortas {
+        display: flex;
+        flex-direction: column; }
+        .contenedorGaleria .mainGaleria3 .fotosTortas img {
+          width: 430px;
+          height: 370px; }
+      .contenedorGaleria .mainGaleria4 .fotosTorta2 {
+        display: flex;
+        flex-direction: column; }
+        .contenedorGaleria .mainGaleria4 .fotosTorta2 img {
+          width: 450px;
+          height: 350px; } }
 
 .contenedorReserva {
   display: grid;
@@ -706,3 +861,62 @@
     color: black;
     font-family: 'Amatic SC', cursive;
     font-size: 45x; }
+  @media screen and (max-width: 768px) {
+    .contenedorReserva {
+      height: max-content;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 0.5fr 0.2fr 0.1fr 1fr 0.5fr 0.1fr;
+      grid-template-areas: "logoReserva" "menuReserva" "tituloReserva" "formReserva" "formReserva" "footerReserva"; }
+      .contenedorReserva .logoReserva {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .contenedorReserva .logoReserva img {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-left: 0px; }
+      .contenedorReserva .menuReserva {
+        flex-direction: row;
+        align-items: center; }
+        .contenedorReserva .menuReserva ul {
+          flex-direction: row;
+          align-items: center;
+          font-size: 40px;
+          margin-top: 0px;
+          padding-right: 0px; }
+      .contenedorReserva .botonesReserva {
+        display: flex;
+        align-content: center; } }
+  @media screen and (max-width: 500px) {
+    .contenedorReserva {
+      height: max-content;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 0.5fr 0.2fr 0.1fr 1fr 0.5fr 0.1fr;
+      grid-template-areas: "logoReserva" "menuReserva" "tituloReserva" "formReserva" "formReserva" "footerReserva"; }
+      .contenedorReserva .logoReserva {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .contenedorReserva .logoReserva img {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-left: 0px; }
+      .contenedorReserva .menuReserva {
+        flex-direction: column;
+        align-items: center; }
+        .contenedorReserva .menuReserva ul {
+          flex-direction: column;
+          align-items: center;
+          font-size: 50px;
+          margin-top: 0px;
+          padding-right: 0px; }
+      .contenedorReserva .mainReserva form input {
+        border-radius: 2mm;
+        width: 10cm;
+        height: 25px; }
+      .contenedorReserva .mainReserva form textarea {
+        width: 320px; } }

@@ -227,4 +227,199 @@
     background-color: antiquewhite;
     font-size: 45x;
 }
+
+@media screen and(max-width: 768px) {
+    height: max-content;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 0.1fr 0.2fr 0.1fr 0.1fr 1fr 1fr 0.1fr 1fr 1fr 0.1fr;
+    grid-template-areas:
+        "logoGaleria logoGaleria"
+        "menuGaleria menuGaleria"
+        "tituloGaleria tituloGaleria"
+        "label1 label1"
+        "fotosCafe fotosCafe"
+        "fotosCafe2 fotosCafe2"
+        "label2 label2"
+        "fotosTortas fotosTortas"
+        "fotosTortas2 fotosTortas2"
+        "footerGaleria footerGaleria";
+
+    .logoGaleria {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0px;
+        }
+    }
+
+    .menuGaleria {
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+
+        ul {
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            font-size: 35px;
+            margin-top: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    .mainGaleria {
+
+        .fotosCafe {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                @include sizes(350px, 300px);
+            }
+        }
+    }
+
+    .mainGaleria2 {
+
+        .fotosCafe2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                @include sizes(300px, 300px);
+            }
+        }
+    }
+
+    .mainGaleria3 {
+
+        .fotosTortas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                @include sizes(430px, 370px);
+            }
+        }
+    }
+
+    .mainGaleria4 {
+
+        .fotosTorta2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                @include sizes(450px, 350px);
+            }
+        }
+    }
+}
+
+
+@media screen and(max-width: 500px) {
+    height: max-content;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.2fr 0.1fr 0.1fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.1fr;
+    grid-template-areas:
+        "logoGaleria"
+        "menuGaleria"
+        "tituloGaleria"
+        "label1"
+        "fotosCafe"
+        "fotosCafe2"
+        "label2"
+        "fotosTortas"
+        "fotosTortas2"
+        "footerGaleria";
+
+    .logoGaleria {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0px;
+        }
+    }
+
+    .menuGaleria {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: flex-start;
+
+        ul {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            font-size: 35px;
+            margin-top: 0px;
+            padding-right: 0px;
+        }
+    }
+
+    .mainGaleria {
+
+        .fotosCafe {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                @include sizes(350px, 300px);
+            }
+        }
+    }
+
+    .mainGaleria2 {
+
+        .fotosCafe2 {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                @include sizes(300px, 300px);
+            }
+        }
+    }
+
+    .mainGaleria3 {
+
+        .fotosTortas {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                @include sizes(430px, 370px);
+            }
+        }
+    }
+
+    .mainGaleria4 {
+
+        .fotosTorta2 {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                @include sizes(450px, 350px);
+            }
+        }
+    }
+}
 }
