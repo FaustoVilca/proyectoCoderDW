@@ -405,7 +405,7 @@
             flex-direction: column;
 
             img {
-                @include sizes(430px, 370px);
+                @include sizes(350px, 300px);
             }
         }
     }
@@ -417,7 +417,7 @@
             flex-direction: column;
 
             img {
-                @include sizes(450px, 350px);
+                @include sizes(350px, 300px);
             }
         }
     }
